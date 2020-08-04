@@ -16,7 +16,7 @@ app.use(cookieParser()); // 사용자 인증 같은 곳에서 쿠키 검사할 �
 app.use(bodyParser.json()); // 사용자가 웹사이트로 전달하는 정보 검사 미들웨어
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(morgan("dev")); // 발생하는 모든일들을 logging하는 미들웨어
-app.use(localsMiddleware)
+app.use(localsMiddleware) // middlewares.js에 전역변수를 추가해 이용할 수 있게
 
 
 app.use(routes.home, globalRouter);
