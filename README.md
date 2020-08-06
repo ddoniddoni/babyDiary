@@ -2,11 +2,11 @@
 
 Create BabyDiary with Vanilla and NodeJS
 
-## Pages : 
+## Pages :
 
 - [ ] Home
-- [ ] Join
-- [ ] Login
+- [x] Join
+- [x] Login
 - [x] Search
 - [ ] User Detail
 - [ ] Edit Profile
@@ -14,4 +14,3 @@ Create BabyDiary with Vanilla and NodeJS
 - [ ] Upload
 - [ ] Video Detail
 - [ ] Edit Video
-  
