@@ -1,4 +1,24 @@
-export const join = (req, res) => res.render("join", { pageTitle: "Join" });
+import routes from "../routes";
+
+export const getJoin = (req, res) => {
+  console.log("a");
+  res.render("join", { pageTitle: "Join" });
+};
+
+export const postJoin = (req, res) => {
+  const {
+    body: { name, email, password, password2 },
+  } = req;
+  if (password !== password2) {
+    res.status(400);
+    res.render("join", { pageTitle: "Join" });
+  } else {
+    //  할 일 : 유저등록
+    //  할 일2: 사용자 로그인
+    res.redirect(routes.home);
+  }
+};
+
 export const login = (req, res) => res.render("login", { pageTitle: "Login" });
 export const logout = (req, res) =>
   res.render("logout", { pageTitle: "Logout" });
