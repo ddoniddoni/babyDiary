@@ -4,7 +4,8 @@ export const videos = [
     title: "멋진 동영상",
     description: "테스트 동영상",
     views: 24,
-    videoFile: "https://archive.org/details/BigBuckBunny_124",
+    videoFile:
+      "https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4",
     creator: {
       id: 60645,
       name: "박상돈",
@@ -16,7 +17,8 @@ export const videos = [
     title: "멋진 동영상2",
     description: "테스트 동영상",
     views: 24,
-    videoFile: "https://archive.org/details/BigBuckBunny_124",
+    videoFile:
+      "https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4",
     creator: {
       id: 60645,
       name: "박상돈",
@@ -28,7 +30,8 @@ export const videos = [
     title: "멋진 동영상3",
     description: "테스트 동영상",
     views: 24,
-    videoFile: "https://archive.org/details/BigBuckBunny_124",
+    videoFile:
+      "https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4",
     creator: {
       id: 60645,
       name: "박상돈",
@@ -40,7 +43,8 @@ export const videos = [
     title: "멋진 동영상4",
     description: "테스트 동영상",
     views: 24,
-    videoFile: "https://archive.org/details/BigBuckBunny_124",
+    videoFile:
+      "https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4",
     creator: {
       id: 60645,
       name: "박상돈",
