@@ -10,7 +10,8 @@ const EDIT_PROFILE = "/edit-profile";
 const CHANGE_PASSWORD = "/change-password";
 
 const VIDEOS = "/videos";
-const UPLOAD = "/upload";
+const UPLOAD_VIDEO = "/upload-video";
+const UPLOAD_IMAGE = "/upload-image";
 const VIDEO_DETAIL = "/:id";
 const EDIT_VIDEO = "/:id/edit";
 const DELETE_VIDEO = "/:id/delete";
@@ -32,7 +33,8 @@ const routes = {
   editProfile: EDIT_PROFILE,
   changePassword: CHANGE_PASSWORD,
   videos: VIDEOS,
-  upload: UPLOAD,
+  uploadVideo: UPLOAD_VIDEO,
+  uploadImage: UPLOAD_IMAGE,
   videoDetail: (id) => {
     if (id) {
       return `/videos/${id}`;

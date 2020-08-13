@@ -1,0 +1,10 @@
+extends layouts/main
+
+block content
+    .form-container
+        form(action=`/videos${routes.uploadImage}`, method="post", enctype="multipart/form-data")
+            label(for="file") Image File
+            input(type="file", id="imageFile", name="imageFile" accept="image/*")
+            input(type="text", placeholder="Title", name="title" required=true)
+            textarea(name="description", placeholder="Description" required=true)
+            input(type="submit", value="Upload File")
