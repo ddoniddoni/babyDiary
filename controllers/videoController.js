@@ -5,6 +5,7 @@ export const home = async (req, res) => {
   try {
     const videos = await Video.find({});
     res.render("home", { pageTitle: "Home", videos });
+    console.log(videos);
   } catch (error) {
     console.log(err);
     res.render("home", { pageTitle: "Home", videos: [] });
@@ -30,6 +31,7 @@ export const postVideoUpload = async (req, res) => {
     fileUrl: path,
     title,
     description,
+    extension: "video",
   });
   res.redirect(routes.videoDetail(newVideo.id));
 };
@@ -46,6 +48,7 @@ export const postImageUpload = async (req, res) => {
     fileUrl: path,
     title,
     description,
+    extension: "image",
   });
   res.redirect(routes.videoDetail(newVideo.id));
 };
