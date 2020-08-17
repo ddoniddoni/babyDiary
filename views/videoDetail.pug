@@ -1,4 +1,19 @@
 extends layouts/main
 
 block content
-    p Video Detail
+    if video.extension === "video"
+        .video__player
+            video(src=`/${video.fileUrl}`)
+        .video__info
+            a(href=routes.editVideo) Edit Video
+            h5.video__title=video.title
+            span.video__view=video.views
+            p.video__description=video.description
+    else if video.extension === "image"
+        .video__player
+            image(src=`/${video.fileUrl}`)
+        .vidoe__info
+            a(href=routes.editVideo) Edit Image
+            h5.video__title=video.title
+            span.video__view=video.views
+            p.video__description=video.description

@@ -5,7 +5,6 @@ export const home = async (req, res) => {
   try {
     const videos = await Video.find({});
     res.render("home", { pageTitle: "Home", videos });
-    console.log(videos);
   } catch (error) {
     console.log(err);
     res.render("home", { pageTitle: "Home", videos: [] });
@@ -53,8 +52,19 @@ export const postImageUpload = async (req, res) => {
   res.redirect(routes.videoDetail(newVideo.id));
 };
 
-export const videoDetail = (req, res) =>
-  res.render("videoDetail", { pageTitle: "VideoDetail" });
+export const videoDetail = async (req, res) => {
+  const {
+    params: { id },
+  } = req;
+  try {
+    const video = await Video.findById(id);
+    console.log(video);
+    res.render("videoDetail", { pageTitle: "VideoDetail", video });
+  } catch (error) {
+    console.log(error);
+    res.redirect(routes.home);
+  }
+};
 
 export const editVideo = (req, res) =>
   res.render("editVideo", { pageTitle: "EditVideo" });
