@@ -13,6 +13,7 @@ const app = express();
 app.use(helmet()); // 안전하도록 만드는 미들웨어
 app.set("view engine", "pug");
 app.use("/uploads", express.static("uploads"));
+app.use("/static", express.static("static"));
 app.use(cookieParser()); // 사용자 인증 같은 곳에서 쿠키 검사할 때
 app.use(bodyParser.json()); // 사용자가 웹사이트로 전달하는 정보 검사 미들웨어
 app.use(bodyParser.urlencoded({ extended: true }));
