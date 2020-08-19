@@ -117,5 +117,6 @@ dist
 
 .vscode
 package-lock.json
-static
 uploads
+
+static
