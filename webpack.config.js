@@ -25,7 +25,7 @@ const config = {
           {
             loader: MiniCssExtractPlugin.loader,
             options: {
-              hmr: process.env.WEBPACK_ENV === "development",
+              hmr: process.env.WEBPACK_ENV === "production",
             },
           },
           {
