@@ -8,6 +8,7 @@ const USERS = "/users";
 const USER_DETAIL = "/:id";
 const EDIT_PROFILE = "/edit-profile";
 const CHANGE_PASSWORD = "/change-password";
+const ME = "/me";
 
 const VIDEOS = "/videos";
 const UPLOAD_VIDEO = "/upload-video";
@@ -56,6 +57,7 @@ const routes = {
       return DELETE_VIDEO;
     }
   },
+  me: ME,
 };
 
 export default routes;

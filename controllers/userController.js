@@ -36,9 +36,14 @@ export const postLogin = passport.authenticate("local", {
 });
 
 export const logout = (req, res) => {
-  // 할 일 : 바로 로그아웃 실행
+  req.logout();
   res.redirect(routes.home);
 };
+
+export const getMe = (req, res) => {
+  res.render("userDetail", { pageTitle: "User Detail", user: req.user });
+};
+// req.user = 현재 로그인 된 사용자
 
 export const userDetail = (req, res) =>
   res.render("userDetail", { pageTitle: "UserDetail" });
