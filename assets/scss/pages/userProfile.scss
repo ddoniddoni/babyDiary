@@ -3,11 +3,14 @@
   display: flex;
   align-items: center;
   flex-direction: column;
+  .home-videos {
+    margin-top: 30px;
+  }
   .user-profile__header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 18px;
+    margin-bottom: 20px;
     .profile__username {
       font-size: 18px;
       margin-top: 15px;

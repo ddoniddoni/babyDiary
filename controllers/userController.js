@@ -30,6 +30,7 @@ export const postJoin = async (req, res, next) => {
 
 export const getLogin = (req, res) =>
   res.render("login", { pageTitle: "Login" });
+
 export const postLogin = passport.authenticate("local", {
   failureRedirect: routes.login,
   successRedirect: routes.home,
@@ -50,7 +51,8 @@ export const userDetail = async (req, res) => {
     params: { id },
   } = req;
   try {
-    const user = await User.findById({ id });
+    const user = await User.findById(id).populate("videos");
+    console.log(user);
     res.render("userDetail", { pageTitle: "UserDetail", user });
   } catch (error) {
     console.log(error);

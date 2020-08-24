@@ -2,7 +2,7 @@ mixin videoBlock(video = {})
     .videoBlock
         if video.extension === "video"
             a(href=routes.videoDetail(video.id))
-                    video.videoBlock__thumbnail(src=video.videoFile, controls=false)
+                    video.videoBlock__thumbnail(src=`/${video.videoFile}`, controls=false)
                     h4.videoBlock__title=video.title
                     if video.views === 1
                         h6.videoBlock__views 1 views
@@ -10,7 +10,7 @@ mixin videoBlock(video = {})
                         h6.videoBlock__views #{video.views} views
         else
             a(href=routes.videoDetail(video.id))
-                    image.videoBlock__thumbnail(src=video.videoFile)
+                    image.videoBlock__thumbnail(src=`/${video.videoFile}`)
                     h4.videoBlock__title=video.title
                     if video.views === 1
                         h6.videoBlock__views 1 views
