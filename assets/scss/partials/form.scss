@@ -15,23 +15,33 @@
     padding-top: 10px;
     padding-bottom: 10px;
     border: 1px solid $dark-pink;
+    font-weight: 600;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+
     &:not(:last-child) {
       margin-bottom: 25px;
     }
     &::placeholder {
       color: $black;
-      font-weight: 800;
+      font-weight: 600;
+    }
+    label {
+      font-weight: 600;
     }
   }
   textarea {
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
     margin-bottom: 25px;
+    border: 1px solid $dark-pink;
+    &::placeholder {
+      color: $black;
+      font-weight: 600;
+    }
   }
 
   input[type="submit"] {
-    background-color: $light-pink;
-    color: $black;
+    background-color: $dark-pink;
+    color: white;
   }
 }
 
